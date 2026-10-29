@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Dizpro – Digital Products Store</title>
+<title>DigiShelf – Digital Products Store</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
 <style>
@@ -46,11 +46,13 @@ svg{display:block}
 .badges span{display:flex;align-items:center;gap:8px}
 .hero-img{flex:1 1 460px;min-height:380px;position:relative}
 .hero-img>svg{width:100%;height:100%;min-height:380px}
-.hero-photo{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center}
-.sale{z-index:2;position:absolute;top:22px;right:28px;background:var(--g);color:#fff;border-radius:6px;padding:12px 16px;text-align:center;line-height:1.15}
+.sale{position:absolute;top:22px;right:28px;background:var(--g);color:#fff;border-radius:6px;padding:12px 16px;text-align:center;line-height:1.15}
 .sale small{display:block;font-size:9px;letter-spacing:.18em}
 .sale b{display:block;font-size:11px;letter-spacing:.06em;margin-top:2px}
 .sale em{display:block;font-style:normal;font-family:var(--serif);font-size:26px;color:var(--gold)}
+
+.hero-banner{margin-top:22px}
+.hero-banner img{display:block;width:100%;height:auto;border-radius:18px}
 
 /* categories */
 .cats{display:flex;flex-wrap:wrap;justify-content:space-between;gap:18px;padding:34px 0 8px}
@@ -142,7 +144,7 @@ footer{background:var(--g);color:#fff;margin-top:36px}
 <div class="wrap">
 <a href="#" class="logo">
 <svg width="40" height="40" viewBox="0 0 40 40" aria-hidden="true"><rect x="4" y="8" width="32" height="28" rx="6" fill="none" stroke="#0d3b2e" stroke-width="2.4"/><path d="M13 8V6a7 7 0 0 1 14 0v2" fill="none" stroke="#0d3b2e" stroke-width="2.4" transform="translate(0 3)"/><path d="M13 20l7 8 7-8" fill="none" stroke="#1f5a45" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
-<span><b>Dizpro</b><small>Create · Plan · Grow</small></span>
+<span><b>DigiShelf</b><small>Create · Plan · Grow</small></span>
 </a>
 <form class="search" onsubmit="return false">
 <label for="q" class="sr">Search</label>
@@ -151,8 +153,8 @@ footer{background:var(--g);color:#fff;margin-top:36px}
 </form>
 <div class="icons">
 <a href="#" class="ico"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#16201b" stroke-width="1.8" stroke-linecap="round"><circle cx="12" cy="8" r="4"/><path d="M4 21c1-5 15-5 16 0"/></svg>Account</a>
-<a href="#" class="ico"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#16201b" stroke-width="1.8" stroke-linejoin="round"><path d="M12 20s-8-5-8-11a4.5 4.5 0 0 1 8-2.5A4.5 4.5 0 0 1 20 9c0 6-8 11-8 11z"/></svg>Wishlist</a>
-<a href="#" class="ico"><svg width="22" height="22" style="color:#16201b"><use href="#cart"/></svg>Cart</a>
+<a href="#" class="ico"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#16201b" stroke-width="1.8" stroke-linejoin="round"><path d="M12 20s-8-5-8-11a4.5 4.5 0 0 1 8-2.5A4.5 4.5 0 0 1 20 9c0 6-8 11-8 11z"/></svg>Wishlist<i>3</i></a>
+<a href="#" class="ico"><svg width="22" height="22" style="color:#16201b"><use href="#cart"/></svg>Cart<i>2</i></a>
 </div>
 </div>
 </header>
@@ -165,34 +167,9 @@ footer{background:var(--g);color:#fff;margin-top:36px}
 
 <main class="wrap">
 
-<!-- HERO -->
-<section class="hero">
-<div class="hero-text">
-<h1>Everything You Need, Delivered Instantly</h1>
-<p>Discover quality e-books, trackers and templates across every category — made for the way you work.</p>
-<a href="#shop" class="shop">Shop Now <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
-<div class="badges">
-<span><svg width="20" height="20" style="color:#0d3b2e"><use href="#dl"/></svg>Instant Download</span>
-<span><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#0d3b2e" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="11" width="14" height="9" rx="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/></svg>Secure Payments</span>
-<span><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#0d3b2e" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12a8 8 0 0 1 14-5M20 12a8 8 0 0 1-14 5M18 3v4h-4M6 21v-4h4"/></svg>Free Updates</span>
-</div>
-</div>
-<div class="hero-img">
-<!--<div class="sale"><small>FESTIVE</small><b>SALE</b><em>40%</em><small>OFF</small></div>-->
-<img src="hero.png" alt="Planners, e-books, trackers and worksheets shown on a laptop, tablet and desk" class="hero-photo">
-</div>
-</section>
-
-<!-- CATEGORIES -->
-<section class="cats" aria-label="Categories">
-<a href="#" class="cat"><span class="c"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#0d3b2e" stroke-width="1.7" stroke-linejoin="round"><path d="M12 6C9 4 6 4 3 5v14c3-1 6-1 9 1 3-2 6-2 9-1V5c-3-1-6-1-9 1zM12 6v14"/></svg></span>E-books</a>
-<a href="#" class="cat"><span class="c" style="background:#fbe5dc"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#a63a2a" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="8"/><path d="M8 12l3 3 5-6"/></svg></span>Trackers</a>
-<a href="#" class="cat"><span class="c" style="background:#e5ecf7"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#26456b" stroke-width="1.7" stroke-linejoin="round"><rect x="4" y="4" width="16" height="16" rx="2"/><path d="M4 10h16M10 10v10"/></svg></span>Templates</a>
-<a href="#" class="cat"><span class="c" style="background:#f9efcf"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#8a6a0f" stroke-width="1.7" stroke-linejoin="round"><rect x="4" y="5" width="16" height="15" rx="2"/><path d="M4 10h16M9 3v4M15 3v4"/></svg></span>Planners</a>
-<a href="#" class="cat"><span class="c" style="background:#ece3f6"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#4a3578" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M6 3h9l4 4v14H6z"/><path d="M9 12h7M9 16h7"/></svg></span>Worksheets</a>
-<a href="#" class="cat"><span class="c" style="background:#fbe5dc"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#a63a2a" stroke-width="1.7" stroke-linejoin="round"><path d="M7 9V4h10v5M5 9h14a2 2 0 0 1 2 2v6h-4v3H7v-3H3v-6a2 2 0 0 1 2-2z"/></svg></span>Printables</a>
-<a href="#" class="cat"><span class="c"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#0d3b2e" stroke-width="1.7" stroke-linejoin="round"><path d="M12 3l9 5-9 5-9-5zM3 13l9 5 9-5"/></svg></span>Bundles</a>
-<a href="#shop" class="cat"><span class="c" style="background:#fff;border:1px solid var(--line)"><svg width="24" height="24" viewBox="0 0 24 24" fill="#16201b"><circle cx="6" cy="6" r="2"/><circle cx="12" cy="6" r="2"/><circle cx="18" cy="6" r="2"/><circle cx="6" cy="12" r="2"/><circle cx="12" cy="12" r="2"/><circle cx="18" cy="12" r="2"/><circle cx="6" cy="18" r="2"/><circle cx="12" cy="18" r="2"/><circle cx="18" cy="18" r="2"/></svg></span>View All</a>
+<!-- HERO + CATEGORIES (image) -->
+<section class="hero-banner" aria-label="Featured collections">
+<a href="#shop"><img src="hero-section.png" alt="Everything You Need, Delivered Instantly — e-books, trackers, templates, planners, worksheets, printables and bundles"></a>
 </section>
 
 <!-- TOP PICKS -->
